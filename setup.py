@@ -1,8 +1,7 @@
 from setuptools import setup, find_packages
 
 requires = [
-    'requests==2.18.4',
-    'pyquery==1.2.17'
+    'beautifulsoup4==4.6.0'
 ]
 
 setup(
