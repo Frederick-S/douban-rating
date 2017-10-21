@@ -16,14 +16,14 @@ if __name__ == '__main__':
 
         sys.exit(1)
 
-    type = sys.argv[1]
+    query_type = sys.argv[1]
 
-    if type not in ['-book', '-movie']:
+    if query_type not in ['-book', '-movie']:
         print('Invalid type')
 
         sys.exit(1)
 
     title = sys.argv[2]
-    ratings = query(type.replace('-', ''), title)
+    ratings = query(query_type.replace('-', ''), title)
 
     print_ratings(ratings)

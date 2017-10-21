@@ -8,8 +8,8 @@ query_urls = {
 }
 
 
-def query(type, title):
-    query_url = query_urls.get(type)
+def query(query_type, title):
+    query_url = query_urls.get(query_type)
     response = requests.get(query_url.format(query=title))
     items = response.json()
 
