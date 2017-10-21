@@ -15,14 +15,14 @@ def main():
     if len(sys.argv) != 3:
         print('Usage: douban-rating -book book-name')
 
-        sys.exit(1)
+        return
 
     query_type = sys.argv[1]
 
     if query_type not in ['-book', '-movie']:
         print('Invalid type')
 
-        sys.exit(1)
+        return
 
     title = sys.argv[2]
     ratings = query(query_type.replace('-', ''), title)
