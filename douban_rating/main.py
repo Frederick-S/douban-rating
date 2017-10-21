@@ -10,7 +10,7 @@ def print_ratings(ratings):
 
     print(table)
 
-if __name__ == '__main__':
+def main():
     if len(sys.argv) != 3:
         print('Usage: douban-rating -book book-name')
 
@@ -27,3 +27,6 @@ if __name__ == '__main__':
     ratings = query(query_type.replace('-', ''), title)
 
     print_ratings(ratings)
+
+if __name__ == '__main__':
+    main()
