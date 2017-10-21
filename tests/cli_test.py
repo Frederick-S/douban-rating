@@ -23,3 +23,6 @@ class TestCli(unittest.TestCase):
             main()
 
         self.assertEqual('Invalid type\n', f.getvalue())
+
+if __name__ == '__main__':
+    unittest.main()
