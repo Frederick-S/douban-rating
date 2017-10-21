@@ -24,5 +24,13 @@ class TestCli(unittest.TestCase):
 
         self.assertEqual('Invalid type\n', f.getvalue())
 
+        sys.argv[1:] = ['-book', 'flask']
+        f = io.StringIO()
+
+        with redirect_stdout(f):
+            main()
+
+        self.assertTrue(f.getvalue().index('Flask') > 0)
+
 if __name__ == '__main__':
     unittest.main()
