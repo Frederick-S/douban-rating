@@ -2,10 +2,14 @@ import requests
 from bs4 import BeautifulSoup
 from douban_rating.rating import Rating
 
-query_url = 'https://book.douban.com/j/subject_suggest?q={query}'
+query_urls = {
+    'book': 'https://book.douban.com/j/subject_suggest?q={query}',
+    'movie': 'https://movie.douban.com/j/subject_suggest?q={query}'
+}
 
 
-def query(title):
+def query(type, title):
+    query_url = query_urls.get(type)
     response = requests.get(query_url.format(query=title))
     items = response.json()
 

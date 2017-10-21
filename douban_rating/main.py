@@ -1,7 +1,29 @@
+import sys
 from douban_rating.query import query
+from simple_table import SimpleTable
+
+
+def print_ratings(ratings):
+    table = SimpleTable()
+    table.set_headers(['Title', 'Rating'])
+    table.add_rows([[rating.title, rating.rating] for rating in ratings])
+
+    print(table)
 
 if __name__ == '__main__':
-    ratings = query('flask')
+    if len(sys.argv) != 3:
+        print('Usage: douban-rating -book book-name')
 
-    for rating in ratings:
-        print(rating.title + ' ' + rating.rating)
+        sys.exit(1)
+
+    type = sys.argv[1]
+
+    if type not in ['-book', '-movie']:
+        print('Invalid type')
+
+        sys.exit(1)
+
+    title = sys.argv[2]
+    ratings = query(type.replace('-', ''), title)
+
+    print_ratings(ratings)

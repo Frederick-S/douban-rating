@@ -1,7 +1,8 @@
 from setuptools import setup, find_packages
 
 requires = [
-    'beautifulsoup4==4.6.0'
+    'beautifulsoup4==4.6.0',
+    'simple_table'
 ]
 
 setup(
