@@ -10,6 +10,7 @@ def print_ratings(ratings):
 
     print(table)
 
+
 def main():
     if len(sys.argv) != 3:
         print('Usage: douban-rating -book book-name')
