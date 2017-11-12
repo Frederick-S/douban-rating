@@ -32,5 +32,6 @@ class TestCli(unittest.TestCase):
 
         self.assertTrue(f.getvalue().index('Flask') > 0)
 
+
 if __name__ == '__main__':
     unittest.main()

@@ -10,5 +10,6 @@ class TestQuery(unittest.TestCase):
 
         self.assertTrue(len(ratings) > 0)
 
+
 if __name__ == '__main__':
     unittest.main()

@@ -29,5 +29,6 @@ def main():
 
     print_ratings(ratings)
 
+
 if __name__ == '__main__':
     main()
