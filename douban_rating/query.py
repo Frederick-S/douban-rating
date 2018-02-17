@@ -14,7 +14,7 @@ def query(query_type, title):
     response = requests.get(query_url.format(query=title))
     items = response.json()
 
-    return query_items(items)
+    return query_items(items) if len(items) > 0 else []
 
 
 def query_items(items):

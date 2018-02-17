@@ -4,6 +4,11 @@ from simple_table import SimpleTable
 
 
 def print_ratings(ratings):
+    if len(ratings) == 0:
+        print('No results found')
+
+        sys.exit(0)
+
     table = SimpleTable()
     table.set_headers(['Title', 'Rating'])
     table.add_rows([[rating.title, rating.rating] for rating in ratings])

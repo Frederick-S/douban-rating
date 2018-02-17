@@ -8,7 +8,7 @@ requires = [
 
 setup(
     name='douban_rating',
-    version='0.0.3',
+    version='0.0.4',
     description='Get douban rating in terminal.',
     url='https://github.com/Frederick-S/douban-rating',
     packages=find_packages(exclude=['tests']),
