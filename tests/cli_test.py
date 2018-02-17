@@ -32,6 +32,14 @@ class TestCli(unittest.TestCase):
 
         self.assertTrue(f.getvalue().index('Flask') > 0)
 
+        sys.argv[1:] = ['-book', 'slfjsldjfeourflsfjdjflsfjlsfjslfjlsfj']
+        f = io.StringIO()
+
+        with redirect_stdout(f):
+            main()
+
+        self.assertTrue('No results found\n', f.getvalue())
+
 
 if __name__ == '__main__':
     unittest.main()

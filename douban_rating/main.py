@@ -7,7 +7,7 @@ def print_ratings(ratings):
     if len(ratings) == 0:
         print('No results found')
 
-        sys.exit(0)
+        return
 
     table = SimpleTable()
     table.set_headers(['Title', 'Rating'])
