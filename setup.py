@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 requires = [
     'beautifulsoup4==4.6.0',
-    'requests==2.18.4',
+    'requests==2.20.0',
     'simple_table'
 ]
 
